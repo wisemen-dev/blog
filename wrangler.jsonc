@@ -1,0 +1,10 @@
+{
+  "name": "blog",
+  "compatibility_date": "2026-10-28",
+  "assets": {
+    // Hugo 构建产物目录（.gitignore 忽略它没关系，构建在 Cloudflare 侧进行）
+    "directory": "./public",
+    // 找不到的路径回退到 Hugo 生成的 404 页面
+    "not_found_handling": "404-page"
+  }
+}
