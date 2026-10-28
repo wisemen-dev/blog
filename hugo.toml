@@ -1,0 +1,70 @@
+baseURL = "https://blog.062701.xyz/"
+languageCode = "zh-cn"
+defaultContentLanguage = "zh-cn"
+title = "Molly 的小站"
+theme = "PaperMod"
+enableEmoji = true
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  env = "production"
+  defaultTheme = "auto" # 跟随系统亮暗色，也可改 "light" / "dark"
+  description = "记录生活与思考"
+  author = "Molly"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  ShowWordCount = false
+  DateFormat = "2006-01-02"
+
+[params.homeInfoParams]
+  Title = "你好，欢迎来到我的小站 👋"
+  Content = "这里记录我的生活随笔与思考。"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/wisemen-dev"
+
+[params.assets]
+  favicon = "/favicon.ico"
+
+# 搜索功能需要 JSON 输出（PaperMod 内置 Fuse.js 客户端搜索）
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[[menus.main]]
+  name = "文章"
+  pageRef = "/"
+  weight = 10
+
+[[menus.main]]
+  name = "归档"
+  pageRef = "/archives/"
+  weight = 20
+
+[[menus.main]]
+  name = "标签"
+  pageRef = "/tags/"
+  weight = 30
+
+[[menus.main]]
+  name = "搜索"
+  pageRef = "/search/"
+  weight = 40
